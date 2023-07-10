@@ -1,5 +1,7 @@
 ﻿
 //Задача №10
+
+/*
 // Напишите программу, которая принимает на вход трехзначное число и на входе показывает ВТОРУЮ цифру этого числа
 
 
@@ -25,4 +27,40 @@ if (num1 > 100 & num1 < 1000)
 else
 {
     Console.Write("Неверно. Нужно ввести трехзначное число. Перезапустите программу и попробуйте снова.");
+}
+
+
+*/
+
+
+//Задача№13
+
+//Напишите программу, которая выводит третью цифру заданного чтисла
+int CutNumber(int num, int num2)
+{
+    int hundred = num / Convert.ToInt32(Math.Pow(10, (num2-3))); //Приведение к 3-х значному числу
+    int result = hundred % 10;
+    return result;
+}
+Console.Write("Введите число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+int test = num1 / 100; // Проверка введенного числа на наличие третьего разряда
+int test2 = num1 / 10; // Переменная для нахождения разрядности введенного числа и приведения его к 3-х значному
+
+if (test > 0)
+{
+    while (test2 > 0)
+    {
+        test2 = test2 / 10;
+        //Console.WriteLine("Остаток2 " + test2);
+        count = count + 1;
+        //Console.WriteLine("счетчик " + count);
+    }
+    int third_num = CutNumber(num1, count);
+    Console.Write("Третья цифра введенного числа: " + third_num);
+}
+else
+{
+    Console.Write("Ошибка: ваше число меньше трехзначного");
 }
