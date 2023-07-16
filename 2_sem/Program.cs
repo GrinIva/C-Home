@@ -35,6 +35,7 @@ else
 
 //Задача№13
 
+/*
 //Напишите программу, которая выводит третью цифру заданного чтисла
 int CutNumber(int num, int num2)
 {
@@ -64,3 +65,24 @@ else
 {
     Console.Write("Ошибка: ваше число меньше трехзначного");
 }
+
+*/
+
+bool RestDay(int num)
+{
+    if(num > 5 && num <= 7) return true;
+    else return false;
+}
+
+
+Console.WriteLine("Введите число: ");
+int daynumber = Convert.ToInt32(Console.ReadLine());
+bool result = RestDay(daynumber);
+Console.WriteLine(result);
+if (result == true) Console.Write("Выходной");
+else Console.Write("Работай");
+
+
+      
+
+
