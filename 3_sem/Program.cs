@@ -1,9 +1,32 @@
 ﻿
 //1.
-
+/*
 //Напишите программу, которая на вход принимает пятизначное число и проверяет, является ли 
-//оно палиндромом первого числа
+//оно палиндромом 
 
+int Revers(int number)
+{
+    int numrevers = 0;
+    int num3 = 0;
+
+    while(number > 0)
+    {
+        num3 = number % 10;
+        numrevers = numrevers * 10 + num3;
+        number = number / 10;
+    }
+    return numrevers;
+       
+}
+
+Console.WriteLine ("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine(Revers(num));
+int numr = Revers(num);
+
+if (num == numr) Console.WriteLine("Введенное вами число - полиндром");
+else Console.WriteLine("Введенное вами число - не полиндром");
+*/
 
 
 //2.
@@ -38,6 +61,7 @@ Console.WriteLine(rezult);
 
 
 //3
+/*
 //Напишите программу, которая принимает на вход число (N) и выдает таблицу  кубов 
 // чисел от 1 до N
 
@@ -55,3 +79,4 @@ void TabKub (int number)
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 TabKub(number);
+*/
