@@ -60,7 +60,7 @@ int OddIndexSum(int[]array)
 {
     int oddSum = 0;
     for(int i=1;i<array.Length;i=i+2)
-        oddSum++;
+        oddSum=oddSum+array[i];
     return oddSum;
 }
 
@@ -73,7 +73,7 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 int [] myarray = NewArrayCreate(length,min,max);
 ShowArray(myarray);
-Console.WriteLine("Sum of numbers with odd index is ")
+Console.WriteLine("Sum of numbers with odd index is " + OddIndexSum(myarray));
 
 //Task38.
 //Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным 
