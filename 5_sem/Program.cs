@@ -75,6 +75,7 @@ int [] myarray = NewArrayCreate(length,min,max);
 ShowArray(myarray);
 Console.WriteLine("Sum of numbers with odd index is " + OddIndexSum(myarray));
 
+
 //Task38.
 //Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным 
 //зачениями элементов массива
