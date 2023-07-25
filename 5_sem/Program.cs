@@ -41,7 +41,7 @@ Console.WriteLine("Массив содержит " + CountEvenNumber(myarray) + 
 //Task 36.
 //Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов,
 //стоящих на нечетных позициях (i=1(3,5,7...))
-
+/*
 int[] NewArrayCreate(int size, int minValue, int maxValue)
 {
     int[] array = new int[size];
@@ -75,7 +75,50 @@ int [] myarray = NewArrayCreate(length,min,max);
 ShowArray(myarray);
 Console.WriteLine("Sum of numbers with odd index is " + OddIndexSum(myarray));
 
-
+*/
 //Task38.
 //Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным 
 //зачениями элементов массива
+
+
+double[]CreateArray(int size)
+{
+    double[]array=new double[size];
+    for(int i=0;i<size;i++)
+    {
+    Console.WriteLine("input number: ");
+    array[i] = Convert.ToDouble(Console.ReadLine());
+    }
+    return array;
+}
+
+void ShowArray(double[]array)
+{
+    for(int i=0;i<array.Length; i++)
+        Console.Write(array[i] + " ");
+}Console.WriteLine();
+
+double DefMaxMin(double[]array)
+{
+    int i=0;
+    double min = array[i];
+    double max = array[i];
+    for(i=1;i<array.Length;i++)
+    {
+        if(array[i]<min)
+        min = array[i];
+        else if(array[i]>max)
+        max = array[i];
+
+    }
+    return Math.Round(max-min,2);
+}
+
+Console.WriteLine("Задайте размер массива: ");
+double length = Convert.ToDouble(Console.ReadLine());
+int arraylength = (int) length;
+double[]myarray = CreateArray(arraylength);
+ShowArray(myarray);
+double def = DefMaxMin(myarray);
+Console.WriteLine();
+Console.WriteLine("Def is: " + def);
