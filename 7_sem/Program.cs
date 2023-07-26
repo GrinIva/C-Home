@@ -1,4 +1,7 @@
-﻿void PrintArray(double[,] matr) // Метод вывода массива на экран
+﻿
+//47 task
+
+void PrintArray(double[,] matr) // Метод вывода массива на экран
 {
 
     for (int i = 0; i < matr.GetLength(0); i++)
