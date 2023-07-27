@@ -91,7 +91,7 @@ else
 //52 task
 //задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов 
 //каждого столбца
-
+/*
 //int метод заполнения двумерного массива
 int[,] Create2dArray(int row, int col, int minValue, int maxValue) 
 {
@@ -118,16 +118,18 @@ void PrintArray(int[,] matr)
 
 void MeanNumber(int[,] matr) // Метод вывода массива на экран
 {
-    int mean = 0
-
+    
     for (int j = 0; j < matr.GetLength(1); j++)
     {
+        double sum = 0;
+        
+   
         for (int i = 0; i < matr.GetLength(0); i++)
-
-            mean += matr[i,j];
-
-
-        Console.WriteLine("Arithmetic mean of numbers in " + j +" colom is "+ mean);
+                    
+            sum += matr[i,j];
+            
+        
+        Console.WriteLine("Arithmetic mean of numbers in " + j +" colom is "+ sum/matr.GetLength(0));
     }
 }
 
@@ -145,3 +147,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[,]myarray = Create2dArray(row,col,min,max);
 PrintArray(myarray);
 MeanNumber(myarray);
+*/
