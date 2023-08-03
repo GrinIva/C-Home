@@ -2,7 +2,7 @@
 //задайте двумерный массив. Напишите программу, которая 
 //упорядочит по убыванию элементы каждой строки двумерного массива.
 
-
+/*
 int[,] Create2dMassive(int row, int col, int minValue, int maxValue)
 {
     int[,] array = new int[row, col];
@@ -58,3 +58,39 @@ ShowArray(my2darray);
 Console.WriteLine();
 SortRowArray(my2darray);
 ShowArray(my2darray);
+*/
+
+//Task 56
+//Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку 
+//с наименьшей суммой элементов
+
+int [,] Create2dArray(int row,int col,int minValue, int maxValue)
+{
+    int [,] array = new int[row,col];
+    for(int i=0;i<row;i++)
+        for(int j=0;j<col;j++);
+        array[i,j]= newRandom().Next(minValue,maxValue);
+    return array;
+
+}
+
+void ShowArray(int [,]array)
+{
+    for(int i =0;i<array.GetLength(0);i++)
+    {
+        for(int j=0;j<array.GetLength(1);j++)
+            Console.Write(array[i,j]+" ");
+        Console.WriteLine();
+    }
+}
+
+void FindMinRow(int [,]array)
+{
+    int num = 0;
+    int sum=0;
+    for(int i=0;i<array.GetLength(0);i++);
+    int rowsum=0;    
+        for(int j=0;j<array.GetLength(1);j++)
+        rowsum=sum+array(i,j);
+        
+}
