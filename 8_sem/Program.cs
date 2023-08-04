@@ -241,33 +241,28 @@ int[,,] Create3dMassive(int row, int col, int shir, int minValue, int maxValue)
 {
     int[,,] array = new int[row, col, shir];
 
-    for (int i = 0; i < row; i++) 
-        for (int j = 0; j < col; j++) 
-            for(int z=0; z<shir; z++)
+    for (int z = 0; z < shir; z++) 
+        for (int i = 0; i < row; i++) 
+            for(int j=0; j<col; j++)
             array[i, j, z] = new Random().Next(minValue, maxValue+1);
     return array;
 }
 
 void Show3dArray(int [,,]array)
-{   int sumj=-1;
-    for(int i =0;i<array.GetLength(0);i++)
+{   
+    for(int z =0;z<array.GetLength(2);z++)
    
     {
-        sumj++;
-        int sumi=-1;
-        for(int j=0;j<array.GetLength(1);j++)
+        for(int i=0;i<array.GetLength(0);i++)
         {
-            sumi++;
-            int sumz=-1;
-            for(int z=0;z<array.GetLength(2);z++)
+            for(int j=0;j<array.GetLength(1);j++)
             {
-                sumz++;
-                Console.Write(array[i,j,z]+ "("+sumi+","+sumj+","+sumz+")");
+                Console.Write(array[i,j,z]+ "("+i+","+j+","+z+")");
 
             }
             Console.WriteLine();
         }
-        Console.WriteLine();
+        Console.WriteLine();   
     }
 }
 
