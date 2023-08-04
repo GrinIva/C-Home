@@ -237,14 +237,23 @@ Console.WriteLine("error");
 // Сформируйте трехмерный массив из неповторяющихся двузначных чисел. Напишите программу,
 //которая будет построчно выводить массив добавляя индексы каждого элемента
 
-int[,,] Create3dMassive(int row, int col, int shir, int minValue, int maxValue)
+/*
+int[,,] Create3dMassive(int row, int col, int shir)
 {
+    
     int[,,] array = new int[row, col, shir];
-
+    int num=0;
     for (int z = 0; z < shir; z++) 
+    {
         for (int i = 0; i < row; i++) 
+        {    
             for(int j=0; j<col; j++)
-            array[i, j, z] = new Random().Next(minValue, maxValue+1);
+            {
+                array[i, j, z] =num + 1;
+                num=array[i,j,z];
+            }
+        }
+    }            
     return array;
 }
 
@@ -274,10 +283,15 @@ Console.WriteLine("input shir: ");
 int shir = Convert.ToInt32(Console.ReadLine());
 
 
-Console.WriteLine("input minValue: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("input maxValue: ");
-int max = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("input minValue: ");
+//int min = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("input maxValue: ");
+//int max = Convert.ToInt32(Console.ReadLine());
 
-int[,,] my3darray = Create3dMassive(row,col,shir,min,max);
+int[,,] my3darray = Create3dMassive(row,col,shir);
 Show3dArray(my3darray);
+
+*/
+
+//
+
