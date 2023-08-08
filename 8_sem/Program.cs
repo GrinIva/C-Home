@@ -308,16 +308,16 @@ int[,]Create2DArray(int row, int col)
  
     while (temp <= array.GetLength(0) * array.GetLength(1))
     {
-    array[i, j] = temp;
-    temp++;
-    if (i <= j + 1 && i + j < array.GetLength(1) - 1)
-        j++;
-    else if (i < j && i + j >= array.GetLength(0) - 1)
-        i++;
-    else if (i >= j && i + j > array.GetLength(1) - 1)
-        j--;
-    else
-        i--;
+        array[i, j] = temp;
+        temp++;
+        if (i <= j + 1 && i + j < array.GetLength(1) - 1)
+            j++;
+            else if (i < j && i + j >= array.GetLength(0) - 1)
+                i++;
+                else if (i >= j && i + j > array.GetLength(1) - 1)
+                    j--;
+                    else
+                        i--;
     }
     return array;
 }
